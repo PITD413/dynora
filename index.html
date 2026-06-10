@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -27,7 +28,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 10;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.35);
+      backdrop-filter: blur(8px);
     }
 
     .logo {
@@ -36,15 +39,52 @@
       color: #d6b46a;
     }
 
-    nav a {
-      color: #f5f1e8;
-      text-decoration: none;
-      margin-left: 35px;
-      font-size: 14px;
-      letter-spacing: 1px;
+    .menu-button {
+      width: 32px;
+      height: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
     }
 
-    nav a:hover {
+    .menu-button span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #d6b46a;
+      transition: 0.3s ease;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 88px;
+      right: 60px;
+      background: rgba(5, 5, 5, 0.95);
+      border: 1px solid rgba(214, 180, 106, 0.25);
+      padding: 25px 35px;
+      display: none;
+      flex-direction: column;
+      gap: 18px;
+      z-index: 999;
+      min-width: 190px;
+      text-align: right;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      color: #f5f1e8;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: 0.3s ease;
+    }
+
+    .mobile-menu a:hover {
       color: #d6b46a;
     }
 
@@ -158,8 +198,9 @@
         padding: 25px;
       }
 
-      nav {
-        display: none;
+      .mobile-menu {
+        top: 78px;
+        right: 25px;
       }
 
       h1 {
@@ -181,19 +222,30 @@
       }
     }
   </style>
+
 </head>
 
 <body>
 
   <header>
     <div class="logo">DYNORA</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Düfte</a>
-      <a href="#">Über uns</a>
-      <a href="#">Kontakt</a>
-    </nav>
+
+```
+<div class="menu-button" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+```
+
   </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="duefte.html">Düfte</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
 
   <section class="hero">
     <div class="hero-content">
@@ -206,7 +258,7 @@
         eleganten Nächten und der zeitlosen Schönheit Süditaliens.
         DYNORA steht für Luxus, Charakter und mediterrane Eleganz.
       </p>
-      <a href="#" class="btn">Kollektion entdecken</a>
+      <a href="duefte.html" class="btn">Kollektion entdecken</a>
     </div>
   </section>
 
@@ -217,10 +269,19 @@
       <a href="impressum.html">Impressum</a>
     </div>
 
-    <div class="footer-copy">
-      © 2026 DYNORA. Alle Rechte vorbehalten.
-    </div>
+```
+<div class="footer-copy">
+  © 2026 DYNORA. Alle Rechte vorbehalten.
+</div>
+```
+
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("active");
+    }
+  </script>
 
 </body>
 </html>
