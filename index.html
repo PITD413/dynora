@@ -121,6 +121,38 @@
       margin: 0 auto 35px;
     }
 
+    footer {
+      border-top: 1px solid rgba(214, 180, 106, 0.15);
+      padding: 35px 20px;
+      text-align: center;
+      background: #050505;
+    }
+
+    .footer-links {
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #ddd6c7;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin: 0 15px;
+      transition: 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #d6b46a;
+    }
+
+    .footer-copy {
+      color: #777;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
     @media (max-width: 768px) {
       header {
         padding: 25px;
@@ -141,6 +173,11 @@
 
       p {
         font-size: 15px;
+      }
+
+      .footer-links a {
+        display: block;
+        margin: 12px 0;
       }
     }
   </style>
@@ -172,6 +209,18 @@
       <a href="#" class="btn">Kollektion entdecken</a>
     </div>
   </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB</a>
+      <a href="impressum.html">Impressum</a>
+    </div>
+
+    <div class="footer-copy">
+      © 2026 DYNORA. Alle Rechte vorbehalten.
+    </div>
+  </footer>
 
 </body>
 </html>
