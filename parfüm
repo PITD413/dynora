@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DYNORA Parfüm</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Georgia", serif;
+      background: #050505;
+      color: #f5f1e8;
+      min-height: 100vh;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      letter-spacing: 4px;
+      color: #d6b46a;
+    }
+
+    nav a {
+      color: #f5f1e8;
+      text-decoration: none;
+      margin-left: 35px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #d6b46a;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+        radial-gradient(circle at center, #1d1a14 0%, #050505 65%);
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .small-title {
+      color: #d6b46a;
+      letter-spacing: 5px;
+      font-size: 14px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 82px;
+      letter-spacing: 10px;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: 6px;
+      color: #d6b46a;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: #ddd6c7;
+      max-width: 620px;
+      margin: 0 auto 45px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 42px;
+      border: 1px solid #d6b46a;
+      color: #d6b46a;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      letter-spacing: 2px;
+      font-size: 13px;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #d6b46a;
+      color: #050505;
+    }
+
+    .luxury-line {
+      width: 90px;
+      height: 1px;
+      background: #d6b46a;
+      margin: 0 auto 35px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 25px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      h1 {
+        font-size: 48px;
+        letter-spacing: 6px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">DYNORA</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Düfte</a>
+      <a href="#">Über uns</a>
+      <a href="#">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="small-title">Mediterranean Luxury Fragrance</div>
+      <h1>DYNORA</h1>
+      <h2>PARFÜM</h2>
+      <div class="luxury-line"></div>
+      <p>
+        Ein Duft inspiriert vom Mittelmeer, von warmen Küsten,
+        eleganten Nächten und der zeitlosen Schönheit Süditaliens.
+        DYNORA steht für Luxus, Charakter und mediterrane Eleganz.
+      </p>
+      <a href="#" class="btn">Kollektion entdecken</a>
+    </div>
+  </section>
+
+</body>
+</html>
